@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,10 @@ class HomeController extends Controller
     public function index()
     {
         return view('admin.home');
+    }
+
+    public function postSample(){
+        $sys_search_panel = DB::table('sys_search_panel')->select()->get();
+        return response()->json($sys_search_panel);
     }
 }

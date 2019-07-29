@@ -7,7 +7,6 @@ Vue.use(VueRouter);
 
 import {routes} from './admin-routes';
 
-
 /**
  * The following block of code may be used to automatically register your
  * Vue admin-components. It will recursively scan this directory for the Vue
@@ -19,8 +18,8 @@ import {routes} from './admin-routes';
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('ecomponent', require('./admin-components/ExampleComponent.vue').default);
-Vue.component('breadcamp', require('./admin-components/breadcamp.vue').default);
+Vue.component('ecomponent', require('./sample-components/ExampleComponent.vue').default);
+Vue.component('breadcamp', require('./sample-components/breadcamp.vue').default);
 Vue.component('admin-routes', require('./admin-components/adminRoutes.vue').default);
 
 /**
